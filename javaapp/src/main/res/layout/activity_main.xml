@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/checkSupportHonorPushBtn"/>
+
+    <Button
+        android:id="@+id/checkSupportHonorPushBtn"
+        style="@style/ButtonStyle"
+        android:onClick="checkSupportHonorPush"
+        android:text="@string/btn_check_support_honor_push"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPushTokenBtn"/>
+
+    <Button
+        android:id="@+id/getPushTokenBtn"
+        style="@style/ButtonStyle"
+        android:onClick="getPushToken"
+        android:text="@string/btn_register_push_token"
+        app:layout_constraintBottom_toTopOf="@+id/unregisterPushTokenBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkSupportHonorPushBtn"/>
+
+    <Button
+        android:id="@+id/unregisterPushTokenBtn"
+        style="@style/ButtonStyle"
+        android:onClick="deletePushToken"
+        android:text="@string/btn_logout_push_token"
+        app:layout_constraintBottom_toTopOf="@+id/queryPushStatusBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getPushTokenBtn" />
+
+    <Button
+        android:id="@+id/queryPushStatusBtn"
+        style="@style/ButtonStyle"
+        android:onClick="queryPushStatus"
+        android:text="@string/btn_check_notify_msg_switch"
+        app:layout_constraintBottom_toTopOf="@+id/turnOnPushBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unregisterPushTokenBtn" />
+
+    <Button
+        android:id="@+id/turnOnPushBtn"
+        style="@style/ButtonStyle"
+        android:onClick="turnOnPush"
+        android:text="@string/btn_open_notify_msg_switch"
+        app:layout_constraintBottom_toTopOf="@+id/turnOffPushBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queryPushStatusBtn" />
+
+    <Button
+        android:id="@+id/turnOffPushBtn"
+        style="@style/ButtonStyle"
+        android:onClick="turnOffPush"
+        android:text="@string/btn_close_notify_msg_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnOnPushBtn" />
+
+    <Button
+        android:id="@+id/generateIntentBtn"
+        style="@style/ButtonStyle"
+        android:onClick="generateIntent"
+        android:text="@string/btn_generate_intent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnOffPushBtn" />
+
+
+    <Button
+        android:id="@+id/checkIntentBtn"
+        style="@style/ButtonStyle"
+        android:onClick="checkIntent"
+        android:text="@string/btn_check_intent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generateIntentBtn" />
+
+    <EditText
+        android:id="@+id/showEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkIntentBtn"
+        android:text=""
+        android:inputType="text"
+        android:importantForAutofill="no"/>
+
+    <TextView
+        android:id="@+id/intentHintTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showEt"
+        android:text=""
+        android:hint="@string/btn_intent_hint"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

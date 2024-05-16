@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PushDemo</string>
+    <string name="btn_check_support_honor_push">CheckSupportHonorPush</string>
+    <string name="btn_register_push_token">GetPushToken</string>
+    <string name="btn_logout_push_token">DeletePushToken</string>
+    <string name="btn_open_notify_msg_switch">TurnOnPush</string>
+    <string name="btn_close_notify_msg_switch">TurnOffPush</string>
+    <string name="btn_check_notify_msg_switch">QueryPushStatus</string>
+    <string name="btn_generate_intent">GenerateIntent</string>
+    <string name="btn_check_intent">CheckIntent</string>
+    <string name="btn_intent_hint">1.intent携带的参数包含半角分号需要使用Uri.encode或base64编码，否则intent解析异常，无法展示消息。
+        \n2.intent携带的数值需要为int类型，否则intent解析异常，无法展示消息。</string>
+</resources>

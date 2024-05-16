@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {url 'https://developer.hihonor.com/repo'}
+    }
+    dependencies {
+        // todo 增加asplugin插件配置，推荐您使用最新版本。
+        classpath 'com.hihonor.mcs:asplugin:2.0.1.300'
+        // 增加gradle插件配置，根据gradle版本选择对应的插件版本号
+        classpath 'com.android.tools.build:gradle:4.2.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {url 'https://developer.hihonor.com/repo'}
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
